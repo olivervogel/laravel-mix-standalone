@@ -1,9 +1,16 @@
 import Size from './size';
 
-let foo = () => {
-    return new Size(300, 200);
-}
+window.Vue = require('vue');
 
-console.log(foo());
-console.log(foo().aspectRatio);
-console.log(foo().test('hmm'));
+const app = new Vue({
+    el: '#app',
+    data: {
+        width: 16,
+        height: 9,
+    },
+    computed: {
+        size: function () {
+            return new Size(this.width, this.height);
+        }
+    }
+});

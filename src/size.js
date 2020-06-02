@@ -5,7 +5,7 @@ export default class Size {
     }
 
     get aspectRatio() {
-        return this.width / this.height;
+        return Math.round((this.width / this.height) * 100) / 100;
     }
 
     test(value) {

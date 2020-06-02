@@ -4,11 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>untitled</title>
-    <script type="text/javascript" src="dist/app.js"></script>
 </head>
 <body>
     
-    <h1>The quick brown fox jumps over the lazy dog.</h1>
+    <div id="app">
+        <p><input v-model="width" type="range" min="1" max="100"></p>
+        <p><input v-model="height" type="range" min="1" max="100"></p>
+
+        <h1>{{ size.width }} x {{ size.height }} ({{ size.aspectRatio }})</h1>
+    </div>
+
+    <script type="text/javascript" src="dist/app.js"></script>
     
 </body>
 </html>
